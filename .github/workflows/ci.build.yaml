@@ -13,7 +13,7 @@ jobs:
   build:
     # Utiliser la dernière version d'Ubuntu
     runs-on: ubuntu-latest
-#  ,,,djdjdjjdjdj
+
     # Étapes à exécuter
     steps:
       # Récupérer le code du dépôt
@@ -32,7 +32,5 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/devops-static-website:latest .
 
       # Pousser l'image vers Docker Hub
-
-      #gghhhhhhhhhghhhhyyyy
       - name: Push image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-static-website:latest
